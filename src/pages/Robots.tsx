@@ -13,6 +13,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { navItems } from '@/components/navigation';
 import { capabilityPalette, robots } from '@/data/intelligence';
 import { getCapabilityRadar, getRobotPriceTrend, searchIntelligence } from '@/services/intelligence';
+import { RobotModelStage } from '@/components/robot-model-stage';
 
 const countries = ['All', ...new Set(robots.map((robot) => robot.country))];
 const statuses = ['All', ...new Set(robots.map((robot) => robot.status))];
@@ -135,6 +136,7 @@ export default function RobotsPage() {
                 title="Selected robot"
                 description="Capability and price history for the current focus robot."
               />
+              <RobotModelStage robot={selectedRobot} variant="detail" className="h-[260px]" />
               <div className="rounded-2xl border border-border/70 bg-background/40 p-4">
                 <div className="text-lg font-semibold">{selectedRobot.name}</div>
                 <div className="text-sm text-muted-foreground">{selectedRobot.manufacturer}</div>

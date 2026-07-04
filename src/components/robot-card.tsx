@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { RobotModelStage } from '@/components/robot-model-stage';
 import type { RobotRecord } from '@/types/intelligence';
 import { getOverallScore } from '@/services/intelligence';
 
@@ -14,7 +15,7 @@ export function RobotCard({ robot, className }: RobotCardProps) {
   return (
     <Card className={cn('overflow-hidden border-border/70 bg-card/80 shadow-[0_20px_60px_rgba(0,0,0,0.3)]', className)}>
       <div className="relative aspect-[4/3] overflow-hidden border-b border-border/70 bg-gradient-to-b from-white/5 to-transparent">
-        <img src={robot.image} alt={robot.name} className="h-full w-full object-contain p-6" />
+        <RobotModelStage robot={robot} className="absolute inset-0 rounded-none" />
         <Badge className="absolute left-3 top-3 rounded-full bg-background/80 text-foreground backdrop-blur-sm">
           {robot.status}
         </Badge>
@@ -54,4 +55,3 @@ export function RobotCard({ robot, className }: RobotCardProps) {
     </Card>
   );
 }
-

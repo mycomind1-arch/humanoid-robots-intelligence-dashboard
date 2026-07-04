@@ -8,6 +8,7 @@ import { PriceHistoryChart } from '@/charts/price-history-chart';
 import { NewsFeed } from '@/components/news-feed';
 import { PageShell } from '@/components/page-shell';
 import { RobotCard } from '@/components/robot-card';
+import { RobotModelStage } from '@/components/robot-model-stage';
 import { SectionHeading } from '@/components/section-heading';
 import { TimelineFeed } from '@/components/timeline-feed';
 import { Button } from '@/components/ui/button';
@@ -177,6 +178,7 @@ export default function Home() {
                   action={<Button size="sm" variant="secondary" asChild><Link to={`/robots/${featuredRobot.id}`}>Open profile</Link></Button>}
                 />
                 <div className="space-y-4">
+                  <RobotModelStage robot={featuredRobot} variant="detail" className="h-[280px]" />
                   <div className="rounded-2xl border border-border/70 bg-background/40 p-4">
                     <div className="text-sm font-semibold">{featuredRobot.name}</div>
                     <div className="text-sm text-muted-foreground">{featuredRobot.manufacturer}</div>

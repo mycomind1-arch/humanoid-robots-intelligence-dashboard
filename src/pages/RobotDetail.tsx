@@ -9,6 +9,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { navItems } from '@/components/navigation';
 import { capabilityPalette, robots } from '@/data/intelligence';
 import { getCapabilityRadar, getRobotPriceTrend, getOverallScore } from '@/services/intelligence';
+import { RobotModelStage } from '@/components/robot-model-stage';
 
 export default function RobotDetailPage() {
   const { robotId } = useParams();
@@ -27,6 +28,7 @@ export default function RobotDetailPage() {
         <div className="grid gap-6 xl:grid-cols-[0.9fr_1.1fr]">
           <Card className="border-border/70 bg-card/80">
             <CardContent className="space-y-4 p-5">
+              <RobotModelStage robot={robot} variant="detail" className="h-[320px]" />
               <div className="rounded-2xl border border-border/70 bg-background/40 p-4">
                 <div className="text-2xl font-semibold">{robot.manufacturer}</div>
                 <div className="text-sm text-muted-foreground">{robot.country} · {robot.releaseYear}</div>
