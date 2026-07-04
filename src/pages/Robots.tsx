@@ -41,11 +41,11 @@ export default function RobotsPage() {
   const selectedRobot = filteredRobots[0] ?? robots[0];
 
   return (
-    <PageShell title="Humanoid Intelligence Index" subtitle="Robots" navItems={navItems}>
+    <PageShell title="Humanoid Intelligence Index" subtitle="AI-controlled systems" navItems={navItems}>
       <div className="space-y-6">
         <SectionHeading
           title="Robot Database"
-          description="Search by language, price, sensors, dexterity, country, or deployment readiness."
+          description="Search AI-controlled systems by language, price, sensors, dexterity, country, or deployment readiness."
           action={
             <Button asChild variant="secondary">
               <Link to="/compare">Compare up to five robots</Link>
@@ -64,7 +64,7 @@ export default function RobotsPage() {
                 <Input
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Robots under $30000, Chinese humanoids, ROS, five finger hands..."
+                  placeholder="AI-controlled systems under $30000, Chinese robots, ROS, five finger hands..."
                 />
                 <Select value={country} onValueChange={setCountry}>
                   <SelectTrigger>
@@ -91,7 +91,7 @@ export default function RobotsPage() {
                   </SelectContent>
                 </Select>
                 <div className="rounded-2xl border border-border/70 bg-background/40 p-4 text-sm text-muted-foreground">
-                  Try phrases like “robots with vision and force sensors” or “robots with over 40 DOF”.
+                  Try phrases like “AI-controlled systems with vision and force sensors” or “robots with over 40 DOF”.
                 </div>
                 <Button variant="ghost" className="w-full" onClick={() => {
                   setQuery('');
@@ -140,6 +140,7 @@ export default function RobotsPage() {
               <div className="rounded-2xl border border-border/70 bg-background/40 p-4">
                 <div className="text-lg font-semibold">{selectedRobot.name}</div>
                 <div className="text-sm text-muted-foreground">{selectedRobot.manufacturer}</div>
+                <div className="mt-1 text-xs uppercase tracking-[0.18em] text-primary">Control mode: {selectedRobot.controlMode}</div>
                 <div className="mt-2 text-3xl font-semibold text-primary">{selectedRobot.priceLabel}</div>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">{selectedRobot.summary}</p>
               </div>

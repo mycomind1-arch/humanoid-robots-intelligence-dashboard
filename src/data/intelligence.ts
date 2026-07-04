@@ -36,6 +36,7 @@ const fillRobotSources = (provenance: Provenance): RobotRecord['sources'] => ({
   manufacturer: provenance,
   country: provenance,
   countryCode: provenance,
+  controlMode: provenance,
   releaseYear: provenance,
   generation: provenance,
   status: provenance,
@@ -109,7 +110,7 @@ const fillCompanySources = (provenance: Provenance): CompanyRecord['sources'] =>
   summary: provenance,
 });
 
-const robotsBase: Omit<RobotRecord, 'sources'>[] = [
+const robotsBase: Omit<RobotRecord, 'sources' | 'controlMode'>[] = [
   {
     id: 'optimus-gen3',
     name: 'Optimus Gen 3',
@@ -824,6 +825,7 @@ const robotsBase: Omit<RobotRecord, 'sources'>[] = [
 
 export const robots: RobotRecord[] = robotsBase.map((robot) => ({
   ...robot,
+  controlMode: 'AI-controlled' as const,
   sources: fillRobotSources(
     robotSource(
       `${robot.manufacturer} public materials`,
@@ -1461,9 +1463,9 @@ export function buildDashboardMetrics(): DashboardMetric[] {
   );
 
   return [
-    { label: 'Global humanoid count', value: `${robots.length}`, detail: 'Tracked robots in the local intelligence graph', tone: 'accent' },
+    { label: 'AI-controlled systems', value: `${robots.length}`, detail: 'Tracked robots in the local intelligence graph', tone: 'accent' },
     { label: 'Average price', value: formatCurrency(avgPrice), detail: 'Current price of priced robots in the dataset', tone: 'muted' },
-    { label: 'Countries building humanoids', value: `${countries}`, detail: 'Unique manufacturing countries represented', tone: 'positive' },
+    { label: 'Countries represented', value: `${countries}`, detail: 'Unique manufacturing countries represented', tone: 'positive' },
     { label: 'Commercial deployments', value: `${deploymentsCount}`, detail: 'Deployed robots across active sites', tone: 'warning' },
     { label: 'AI capability score', value: `${aiCapability}`, detail: 'Conversation + reasoning + perception blend', tone: 'accent' },
     { label: 'Robot capability score', value: `${robotCapability}`, detail: 'Aggregate platform readiness score', tone: 'positive' },

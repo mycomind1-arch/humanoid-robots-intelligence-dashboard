@@ -27,7 +27,7 @@ export default function ComparePage() {
       <div className="space-y-6">
         <SectionHeading
           title="Robot Compare Tool"
-          description="Select up to five robots and compare price, payload, battery, speed, DOF, sensors, AI, SDK, deployment, and overall score."
+          description="Select up to five AI-controlled systems and compare price, payload, battery, speed, DOF, sensors, AI, SDK, deployment, and overall score."
           action={<div className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Up to five robots</div>}
         />
 
@@ -72,4 +72,3 @@ export default function ComparePage() {
     </PageShell>
   );
 }
-

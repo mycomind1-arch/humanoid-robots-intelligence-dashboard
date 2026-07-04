@@ -19,6 +19,9 @@ export function RobotCard({ robot, className }: RobotCardProps) {
         <Badge className="absolute left-3 top-3 rounded-full bg-background/80 text-foreground backdrop-blur-sm">
           {robot.status}
         </Badge>
+        <div className="absolute left-3 top-12 rounded-full border border-primary/20 bg-primary/10 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-primary">
+          AI-controlled
+        </div>
         <div className="absolute right-3 top-3 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
           {getOverallScore(robot)}
         </div>

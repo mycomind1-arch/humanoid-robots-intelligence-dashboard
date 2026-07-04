@@ -16,11 +16,11 @@ export default function SearchPage() {
   const results = useMemo(() => searchIntelligence(deferredQuery), [deferredQuery]);
 
   return (
-    <PageShell title="Humanoid Intelligence Index" subtitle="Search" navItems={navItems}>
+    <PageShell title="Humanoid Intelligence Index" subtitle="AI-controlled systems search" navItems={navItems}>
       <div className="space-y-6">
         <SectionHeading
           title="Natural Language Search"
-          description="Try queries like: robots under $30000, robots with five finger hands, robots deployed in factories, Chinese humanoids, robots using ROS, robots with over 40 DOF."
+          description="Try queries like: AI-controlled systems under $30000, robots with five finger hands, robots deployed in factories, Chinese AI-controlled robots, robots using ROS, robots with over 40 DOF."
         />
 
         <Card className="border-border/70 bg-card/80">
@@ -34,7 +34,7 @@ export default function SearchPage() {
                   setParams(event.target.value ? { q: event.target.value } : {});
                 }}
                 className="border-0 bg-transparent px-0 shadow-none focus-visible:ring-0"
-                placeholder="Search the intelligence graph..."
+                placeholder="Search AI-controlled systems..."
               />
             </div>
             <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
@@ -52,4 +52,3 @@ export default function SearchPage() {
     </PageShell>
   );
 }
-

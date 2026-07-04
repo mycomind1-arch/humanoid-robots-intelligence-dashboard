@@ -35,6 +35,7 @@ export type RobotRecord = {
   manufacturer: string;
   country: string;
   countryCode: string;
+  controlMode: 'AI-controlled' | 'teleoperated' | 'manual';
   releaseYear: number;
   generation: string;
   status: RobotStatus;

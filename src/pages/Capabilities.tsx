@@ -23,7 +23,7 @@ export default function CapabilitiesPage() {
       <div className="space-y-6">
         <SectionHeading
           title="Capability Matrix"
-          description="Walking, dexterity, autonomy, conversation, manipulation, battery life, and commercial readiness."
+          description="Walking, dexterity, autonomy, conversation, manipulation, battery life, and commercial readiness for AI-controlled systems."
           action={
             <Button variant="secondary">
               <Radar className="size-4" />
@@ -36,6 +36,7 @@ export default function CapabilitiesPage() {
           <Card className="border-border/70 bg-card/80">
             <CardContent className="space-y-4 p-5">
               <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Select robot</div>
+              <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">AI-controlled only</div>
               <Select value={selectedRobotId} onValueChange={setSelectedRobotId}>
                 <SelectTrigger>
                   <SelectValue placeholder="Robot" />

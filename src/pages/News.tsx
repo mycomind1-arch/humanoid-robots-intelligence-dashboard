@@ -15,7 +15,7 @@ export default function NewsPage() {
       <div className="space-y-6">
         <SectionHeading
           title="Live News"
-          description="Every article links to a robot, company, capability, and source. Duplicate stories are removed."
+          description="Every article links to an AI-controlled system, company, capability, and source. Duplicate stories are removed."
           action={
             <Button variant="secondary" asChild>
               <Link to="/timeline">
@@ -50,4 +50,3 @@ export default function NewsPage() {
     </PageShell>
   );
 }
-

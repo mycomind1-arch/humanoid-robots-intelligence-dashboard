@@ -32,6 +32,7 @@ export default function RobotDetailPage() {
               <div className="rounded-2xl border border-border/70 bg-background/40 p-4">
                 <div className="text-2xl font-semibold">{robot.manufacturer}</div>
                 <div className="text-sm text-muted-foreground">{robot.country} · {robot.releaseYear}</div>
+                <div className="mt-2 text-xs uppercase tracking-[0.18em] text-primary">Control mode: {robot.controlMode}</div>
                 <div className="mt-2 text-3xl font-semibold text-primary">{robot.priceLabel}</div>
                 <div className="mt-2 text-sm text-muted-foreground">Overall score: {getOverallScore(robot)}</div>
               </div>

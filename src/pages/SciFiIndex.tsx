@@ -23,7 +23,7 @@ export default function SciFiIndexPage() {
       <div className="space-y-6">
         <SectionHeading
           title="Sci-Fi Reality Index"
-          description="A grounded comparison that shows where current humanoid robotics overlaps with fiction and where it remains speculative."
+          description="A grounded comparison that shows where current AI-controlled robotics overlaps with fiction and where it remains speculative."
           action={<div className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">No inevitability claims</div>}
         />
 
@@ -101,4 +101,3 @@ export default function SciFiIndexPage() {
     </PageShell>
   );
 }
-

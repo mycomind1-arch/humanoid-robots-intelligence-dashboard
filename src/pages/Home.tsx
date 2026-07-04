@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <PageShell
       title="Humanoid Intelligence Index"
-      subtitle="How close is real-world robotics to science fiction?"
+      subtitle="How close are AI-controlled systems to science fiction?"
       navItems={navItems}
     >
       <div className="space-y-8">
@@ -73,7 +73,7 @@ export default function Home() {
                   </div>
                   <div className="space-y-4">
                     <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-balance lg:text-6xl">
-                      Tracking every known humanoid robot, company, deployment, and capability signal.
+                      Tracking every known AI-controlled robot, company, deployment, and capability signal.
                     </h1>
                     <p className="max-w-2xl text-base leading-7 text-muted-foreground lg:text-lg">
                       The platform preserves the current catalog while expanding it into a structured intelligence graph
@@ -127,7 +127,7 @@ export default function Home() {
                       <div className="flex items-center justify-between gap-4">
                         <div>
                           <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Signature question</div>
-                          <div className="mt-2 text-lg font-semibold">How close is real-world robotics to science fiction?</div>
+                          <div className="mt-2 text-lg font-semibold">How close are AI-controlled systems to science fiction?</div>
                         </div>
                         <div className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
                           Answered by data
